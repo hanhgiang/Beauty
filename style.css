@@ -203,7 +203,7 @@ body{
     height: 100%;
 }
 #content>div>a:hover>div>img{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 #content>div>a:hover{
     color: #634242;

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <metaa nme="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Beauty</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="header">
+        <div class="logo">
+            <a href="">
+                <h3>B</h3>
+                <p>Bio Beauty Care</p>
+            </a>
+        </div>
+        <div class="nav">
+            <ul class="menu">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./About.html">About Us</a></li>
+                <li>Product
+                    <ul>
+                        <li><a href="">For Body</a></li>
+                        <li><a href="">For Home</a></li>
+                        <li><a href="">Sale</a></li>
+                    </ul>
+                </li>
+                <li><a href="./Gifts.html">Gifts</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+            <script>
+                const currentLocation = location.href;
+                const menuItem = document.querySelectorAll('a');
+                const menuLength = menuItem.length
+                for(let i=0;i<menuLength;i++){
+                    if(menuItem[i].href=== currentLocation){
+                        menuItem[i].className="active"
+                    }
+                }
+            </script>
+            <a href="" class="login">
+                <i class="fa fa-user-circle-o"></i>
+                <span>Log In</span>
+            </a>
+            <a class="fa fa-shopping-cart" href=""></a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="info">
+            <div class="left">
+                <h2>Contact</h2>
+                <p> 207 Giai Phong, Hai Ba Trung, Ha Noi</p>
+                <p> Phone: 000-000-0000</p> 
+                <p>11181579@st.neu.edu.vn</p>
+            </div>
+            <div class="right">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <input type="text" placeholder="Message">
+                <button>Submit</button>
+            </div>
+        </div>
+        <div class="map">
+        </div>
+        
+        <script>
+            function initMap(){
+                var options={
+                    center: new google.maps.LatLng( 21.028511, 105.804817),
+                    zoom:5
+                }
+                var map=new google.maps.Map(document.getElementsByClassName('map')[0],options);
+                var marker = new google.maps.Marker({
+                    position:{lat:21.000101178161373, lng:105.84353441049947},
+                    map:map
+                })
+            }
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvouTs--usIZe65BZNuJgUkaVEUDTWnOQ&callback=initMap"></script>
+    </div>
+<div id="footer2">
+    <p>© 2021 Bio Beauty Care. Created by Giang Hạnh</p>
+    <span>
+       <a href="" class="fa fa-facebook"></a>
+       <a href="" class="fa fa-twitter "></a>
+    </span>
+</div>
+</body>
+</html>
